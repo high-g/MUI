@@ -7,7 +7,6 @@ import AlarmIcon from '@mui/icons-material/Alarm'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'
 
 function App() {
-  const options = ['The Godfather', 'Pulp Fiction']
   return (
     <div className="App">
       <Button variant="contained">Hello, world.</Button>
