@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Button from '@mui/material/Button'
+import IconButton from '@mui/material/IconButton'
+import Stack from '@mui/material/Stack'
+import DeleteIcon from '@mui/icons-material/Delete'
+import AlarmIcon from '@mui/icons-material/Alarm'
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'
 
 function App() {
+  const options = ['The Godfather', 'Pulp Fiction']
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button variant="contained">Hello, world.</Button>
+      <Stack direction="row" spacing={1}>
+        <IconButton aria-label="delete">
+          <DeleteIcon />
+        </IconButton>
+        <IconButton aria-label="delete" disabled color="primary">
+          <DeleteIcon />
+        </IconButton>
+        <IconButton color="secondary" aria-label="add an alarm">
+          <AlarmIcon />
+        </IconButton>
+        <IconButton color="primary" aria-label="add to shopping cart">
+          <AddShoppingCartIcon />
+        </IconButton>
+      </Stack>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
