@@ -22,7 +22,11 @@ function App() {
             pb: 6,
           }}
         >
-          <Container maxWidth="sm">aa</Container>
+          <Container maxWidth="sm">
+            <Typography component="h1" variant="h2" align="center" color="text.primary">
+              Album layout
+            </Typography>
+          </Container>
         </Box>
       </main>
     </ThemeProvider>
