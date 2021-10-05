@@ -1,31 +1,31 @@
-import Button from '@mui/material/Button'
-import IconButton from '@mui/material/IconButton'
-import Stack from '@mui/material/Stack'
-import DeleteIcon from '@mui/icons-material/Delete'
-import AlarmIcon from '@mui/icons-material/Alarm'
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'
-import Header from './components/Header'
+import { PhotoCamera } from '@mui/icons-material'
+import { CssBaseline, AppBar, Toolbar, Typography, Box, Container } from '@mui/material'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+
+const theme = createTheme()
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Button variant="contained">Hello, world.</Button>
-      <Stack direction="row" spacing={1}>
-        <IconButton aria-label="delete">
-          <DeleteIcon />
-        </IconButton>
-        <IconButton aria-label="delete" disabled color="primary">
-          <DeleteIcon />
-        </IconButton>
-        <IconButton color="secondary" aria-label="add an alarm">
-          <AlarmIcon />
-        </IconButton>
-        <IconButton color="primary" aria-label="add to shopping cart">
-          <AddShoppingCartIcon />
-        </IconButton>
-      </Stack>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <AppBar position="relative">
+        <Toolbar>
+          <PhotoCamera sx={{ mr: 2 }} />
+          <Typography variant="h6">Album layout</Typography>
+        </Toolbar>
+      </AppBar>
+      <main>
+        <Box
+          sx={{
+            bgcolor: 'Background.paper',
+            pt: 8,
+            pb: 6,
+          }}
+        >
+          <Container maxWidth="sm">aa</Container>
+        </Box>
+      </main>
+    </ThemeProvider>
   )
 }
 
